@@ -67,7 +67,7 @@ const getAllIngredients = async (req, res) => {
         return res.json(allProducts);
     } catch (error) {
         console.log(error);
-        res.status(500).json({ error: 'Failed to fetch ingredients' });
+        res.status(500).json({ error: error });
     }
 }
 
