@@ -10,7 +10,7 @@ const getAmazonIngredients = async (req, res) => {
         const products = await amazonScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch ingredients' });
+        res.status(500).json({ error: error });
     }
 }
 
@@ -20,7 +20,7 @@ const getBlinkitIngredients = async (req, res) => {
         const products = await blinkitScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch ingredients' });
+        res.status(500).json({ error: error });
     }
 }
 
@@ -30,7 +30,7 @@ const getZeptoIngredients = async (req, res) => {
         const products = await zeptoScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch ingredients' });
+        res.status(500).json({ error: error });
     }
 }
 
@@ -40,7 +40,7 @@ const getSwiggyIngredients = async (req, res) => {
         const products = await swiggyScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch ingredients' });
+        res.status(500).json({ error: error });
     }
 }
 
@@ -50,7 +50,7 @@ const getBigBasketIngredients = async (req, res) => {
         const products = await bigBasketScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch ingredients' });
+        res.status(500).json({ error: error });
     }
 }
 
