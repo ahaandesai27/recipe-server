@@ -10,7 +10,7 @@ const getAmazonIngredients = async (req, res) => {
         const products = await amazonScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: error });
+        res.status(500).json({ error: error.message });
     }
 }
 
@@ -20,7 +20,7 @@ const getBlinkitIngredients = async (req, res) => {
         const products = await blinkitScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: error });
+        res.status(500).json({ error: error.message });
     }
 }
 
@@ -30,7 +30,7 @@ const getZeptoIngredients = async (req, res) => {
         const products = await zeptoScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: error });
+        res.status(500).json({ error: error.message });
     }
 }
 
@@ -40,7 +40,7 @@ const getSwiggyIngredients = async (req, res) => {
         const products = await swiggyScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: error });
+        res.status(500).json({ error: error.message });
     }
 }
 
@@ -50,7 +50,7 @@ const getBigBasketIngredients = async (req, res) => {
         const products = await bigBasketScraper(ingredient);
         return res.json(products);
     } catch (error) {
-        res.status(500).json({ error: error });
+        res.status(500).json({ error: error.message });
     }
 }
 
@@ -67,7 +67,7 @@ const getAllIngredients = async (req, res) => {
         return res.json(allProducts);
     } catch (error) {
         console.log(error);
-        res.status(500).json({ error: error });
+        res.status(500).json({ error: error.message });
     }
 }
 
