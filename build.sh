@@ -1,2 +1,2 @@
 #!/bin/bash
-./install-chrome.sh
+sudo ./install-chrome.sh
